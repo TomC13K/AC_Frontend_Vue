@@ -1,18 +1,22 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h1>HOOME</h1>
+    <md-autocomplete v-model="vybratPrevodovku" :md-options="prevodovky">
+      <label>Prevodovka</label>
+    </md-autocomplete>
+
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+
 
 export default {
   name: "Home",
-  components: {
-    HelloWorld
-  }
+   data: () => ({
+      vybratPrevodovku: null,
+      prevodovky:["Ab-1", "Ab-fd-4", "A4-f5-tt","B5555","B4444"]
+   })
 };
 </script>
